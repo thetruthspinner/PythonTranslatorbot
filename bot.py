@@ -11,7 +11,7 @@ def start(updater,context):
  updater.message.reply_text('hi i am google translater')
  
 def echo(updater,context):
- updater.message.reply_text('Working function')     
+ updater.message.reply_text('Working function')
  usr_msg =updater.message.text
  translator = Translator()  
  translation = translator.translate(usr_msg,dest='ml') 
