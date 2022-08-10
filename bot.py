@@ -10,6 +10,7 @@ def start(updater,context):
  updater.message.reply_text('hi i am google translater')
  
 def echo(updater,context):
+  updater.message.reply_text('Working function')
  usr_msg =updater.message.text
  translator=google_translator()
  translate_text=translator.translate(usr_msg,lang_tgt='ml')
