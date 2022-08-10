@@ -12,7 +12,7 @@ def start(updater,context):
 def echo(updater,context):
  usr_msg =updater.message.text
  translator=google_translator()
- translate_text=translator.translate(usr_msg,lang_tgt='kn')
+ translate_text=translator.translate(usr_msg,lang_tgt='ml')
  updater.message.reply_text(translate_text)
  
 dp =updater.dispatcher.add_handler
