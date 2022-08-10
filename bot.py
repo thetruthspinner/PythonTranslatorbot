@@ -13,9 +13,15 @@ def start(updater,context):
 def echo(updater,context):
  updater.message.reply_text('Working function')
  usr_msg =updater.message.text
- translator = Translator(service_urls=['translate.googleapis.com'])  
+ translator =Translator(service_urls=['translate.googleapis.com'])  
  translation = translator.translate(usr_msg,dest='ml')
  updater.message.reply_text('function reached here')
+ 
+ 
+ from googletrans import Translator
+translator = Translator(service_urls=['translate.googleapis.com'])
+translation= translator.translate("Der Himmel ist blau und ich mag Bananen", dest='en')
+
  updater.message.reply_text(translation)
  
 dp =updater.dispatcher.add_handler
