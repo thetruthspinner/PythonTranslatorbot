@@ -12,10 +12,16 @@ def start(updater,context):
  
 def echo(updater,context):
  updater.message.reply_text('Working function')
+ 
+ 
+
+       
+       
  usr_msg =updater.message.text
  translator=google_translator()
- translate_text=translator.translate(usr_msg,lang_tgt='ml')
- updater.message.reply_text(translate_text)
+ translator = Translator()  
+ translation = translator.translate(usr_msg,dest='ml') 
+ updater.message.reply_text(translation)
  
 dp =updater.dispatcher.add_handler
 dp(CommandHandler('start',start))
