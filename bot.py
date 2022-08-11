@@ -18,8 +18,7 @@ def echo(updater,context):
  translator = Translator(service_urls=['translate.googleapis.com'])  
  translation = translator.translate(usr_msg,dest='hi')
  x= translation.text
- context.bot.send_message(updater.message.chat.id, x)
- requests.post('https://api.telegram.org/bot5462330526:AAHVnNoLYJBULOmDZehUZlP-j5DUybyfwLY/sendMessage?chat_id=@Python_Translatorbot&text=Hello World!')
+ context.bot.send_message("@Python_Translatorbot", x)
  updater.message.reply_text('function reached here')
  
  
