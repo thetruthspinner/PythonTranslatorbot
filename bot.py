@@ -19,7 +19,7 @@ def echo(updater,context):
  translation = translator.translate(usr_msg,dest='hi')
  x= translation.text
  context.bot.send_message(updater.message.chat.id, x)
- requests.post('https://api.telegram.org/bot5462330526:AAHVnNoLYJBULOmDZehUZlP-j5DUybyfwLY/sendMessage?chat_id=@mypythontrybot&text=Hello World!')
+ requests.post('https://api.telegram.org/bot5462330526:AAHVnNoLYJBULOmDZehUZlP-j5DUybyfwLY/sendMessage?chat_id=@mypythontrybot&text=Hello World 2!')
  updater.message.reply_text('function reached here')
  
  
