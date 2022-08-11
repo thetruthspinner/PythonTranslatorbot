@@ -17,6 +17,8 @@ def echo(updater,context):
  translator = Translator(service_urls=['translate.googleapis.com'])  
  translation = translator.translate(usr_msg,dest='ml')
  context.bot.send_message(updater.message.chat.id, translation)
+ updater.message.reply_text('function reached here')
+ 
  
 dp =updater.dispatcher.add_handler
 dp(CommandHandler('start',start))
