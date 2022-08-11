@@ -13,7 +13,7 @@ def start(updater,context):
 def echo(updater,context):
  updater.message.reply_text('Working function')
  usr_msg = update.message.text
- updater.message.reply_text(usr_msg)
+ context.bot.send_message(usr_msg)
  translator =Translator(service_urls=['translate.googleapis.com'])  
  translation = translator.translate(usr_msg,dest='ml')
  updater.message.reply_text('function reached here')
