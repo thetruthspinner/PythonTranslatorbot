@@ -14,13 +14,10 @@ def echo(updater,context):
  updater.message.reply_text('Working function')
  usr_msg = updater.message.text
  context.bot.send_message(updater.message.chat.id, usr_msg)
- translator =Translator(service_urls=['translate.googleapis.com'])  
+ translator = Translator(service_urls=['translate.googleapis.com'])  
  translation = translator.translate(usr_msg,dest='ml')
- updater.message.reply_text('function reached here')
- 
- updater.message.reply_text(translation)
- 
-dp =updater.dispatcher.add_handler
+ context.bot.send_message(updater.message.chat.id, translation)
+ dp =updater.dispatcher.add_handler
 dp(CommandHandler('start',start))
 dp(MessageHandler(Filters.text,echo))
 
