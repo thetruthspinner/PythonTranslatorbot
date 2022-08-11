@@ -18,7 +18,7 @@ def echo(updater,context):
  translator = Translator(service_urls=['translate.googleapis.com'])  
  translation = translator.translate(usr_msg,dest='hi')
  x= translation.text
- context.bot.send_message("@Python_Translatorbot", x)
+ context.bot.send_message(updater.message.chat.id, x)
  updater.message.reply_text('function reached here')
  
  
