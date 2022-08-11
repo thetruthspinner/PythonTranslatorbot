@@ -2,6 +2,7 @@ from telegram.ext import Updater,MessageHandler,CommandHandler,Filters
 #from google_trans_new import google_translator 
 from googletrans import Translator
 import os
+import requests
 
 BOT_TOKEN = '5462330526:AAHVnNoLYJBULOmDZehUZlP-j5DUybyfwLY'
 
