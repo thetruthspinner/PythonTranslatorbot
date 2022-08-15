@@ -79,7 +79,7 @@ def echo(updater,context):
  #Add dot at the end of definition sentence and remove extra dot. 
  string= (re.sub(r"(\.*\s*%0A\s*%0A🗞️)", "%0A %0A🗞️", string))
  string = (re.sub("(%0A %0A🗞️)", ".%0A %0A🗞️", string))
- updater.message.reply_text(string)
+ # updater.message.reply_text(string)
  
  
  #capitalize first letter after 📚 that we lowered earlier
