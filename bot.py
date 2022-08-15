@@ -69,10 +69,7 @@ def echo(updater,context):
  string= ( re.sub("(^|[📚])\s*([a-zA-Z])", lambda p: p.group(0).upper(), string))
  
  requests.post('https://api.telegram.org/bot'+BOT_TOKEN+'/sendMessage?text='+string+'&chat_id=@mypythontrybot&parse_mode=html')
-
-#sendMessage?chat_id=@mypythontrybot&text='+res)      $url="https://api.telegram.org/bot5532663799:AAF6Kzt0Ux4rYW9ctNckvm7b_cKHp5om6kk/sendMessage?text=$msg&chat_id=@trymybott&parse_mode=html";
  
- #bot5532663799:AAF6Kzt0Ux4rYW9ctNckvm7b_cKHp5om6kk/sendMessage?text=$msg&chat_id=@trymybott&parse_mode=html
  updater.message.reply_text('function reached here')
  
  
