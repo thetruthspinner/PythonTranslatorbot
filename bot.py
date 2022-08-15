@@ -80,8 +80,7 @@ def echo(updater,context):
  
  requests.post('https://api.telegram.org/bot'+BOT_TOKEN+'/sendMessage?text='+string+'&chat_id=@thenewswords&parse_mode=html')
  
- chat_id = updater.message.chat.id
- requests.post('https://api.telegram.org/bot'+BOT_TOKEN+'/sendMessage?text='+string+'&chat_id=chat_id&parse_mode=html')
+ requests.post('https://api.telegram.org/bot'+BOT_TOKEN+'/sendMessage?text='+string+'&chat_id=1518527842&parse_mode=html')
  
  #$url="https://api.telegram.org/botTOKEN/sendMessage?text=$msg&chat_id=$chat_id&parse_mode=html";
  
