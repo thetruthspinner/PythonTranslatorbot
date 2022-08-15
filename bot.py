@@ -85,7 +85,7 @@ def echo(updater,context):
  #$url="https://api.telegram.org/botTOKEN/sendMessage?text=$msg&chat_id=$chat_id&parse_mode=html";
  
  #bot reply whatever it post in channel
- updater.message.reply_text(string)
+# updater.message.reply_text(string)
  
 #updater.message.reply_text('function reached here')
  
