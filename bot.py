@@ -67,6 +67,8 @@ def echo(updater,context):
  
  
  requests.post('https://api.telegram.org/bot'+BOT_TOKEN+'/sendMessage?chat_id=@mypythontrybot&text='+res)
+ 
+ #bot5532663799:AAF6Kzt0Ux4rYW9ctNckvm7b_cKHp5om6kk/sendMessage?text=$msg&chat_id=@trymybott&parse_mode=html
  updater.message.reply_text('function reached here')
  
  
