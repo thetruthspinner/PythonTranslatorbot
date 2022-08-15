@@ -63,7 +63,7 @@ def echo(updater,context):
   worrd=li[index+1]
   
   #trying translation
-  translationn = translator.translate(word,dest='hi')
+  translationn = translator.translate(worrd,dest='hi')
   y= translationn.text
   context.bot.send_message(updater.message.chat.id, y)
   worrd=worrd.lower()
