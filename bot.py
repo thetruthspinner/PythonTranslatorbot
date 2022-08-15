@@ -22,11 +22,11 @@ def echo(updater,context):
  x= translation.text
  context.bot.send_message(updater.message.chat.id, x)
  
- #lowercasing first letter after 📚 which we will capitalize at end
- string= ( re.sub("(^|[📚])\s*([a-zA-Z])", lambda p: p.group(0).lower(), usr_msg))
- 
  
  string=usr_msg.replace("\n", " %0A")
+ 
+  #lowercasing first letter after 📚 which we will capitalize at end
+ string= ( re.sub("(^|[📚])\s*([a-zA-Z])", lambda p: p.group(0).lower(), usr_msg))
  
 #capitalize first letter after colon
  string = ( re.sub("(^|[:])\s*([a-zA-Z])", lambda p: p.group(0).upper(), string))
