@@ -78,6 +78,7 @@ def echo(updater,context):
  
  #Add dot at the end of definition sentence and remove extra dot. 
  debug=string.replace("%0A", "qn")
+ debug=string.replace("\n", "qn")
  updater.message.reply_text("here:"+debug)
  string= (re.sub(r"(\.*\s*%0A\s*%0A🗞️)", "%0A %0A🗞️", string))
  string = (re.sub("(%0A %0A🗞️)", ".%0A %0A🗞️", string))
