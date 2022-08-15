@@ -66,7 +66,7 @@ string=re.compile(r'(\w+#)', re.I).sub(r'<u><b>\1</b></u>', string)
  
  
  
- requests.post('https://api.telegram.org/bot'+BOT_TOKEN+'/sendMessage?chat_id=@mypythontrybot&text='+x)
+ requests.post('https://api.telegram.org/bot'+BOT_TOKEN+'/sendMessage?chat_id=@mypythontrybot&text='+res)
  updater.message.reply_text('function reached here')
  
  
