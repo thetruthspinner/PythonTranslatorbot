@@ -79,7 +79,10 @@ def echo(updater,context):
  string= ( re.sub("(^|[📚])\s*([a-zA-Z])", lambda p: p.group(0).upper(), string))
  
  requests.post('https://api.telegram.org/bot'+BOT_TOKEN+'/sendMessage?text='+string+'&chat_id=@thenewswords&parse_mode=html')
+ 
  requests.post('https://api.telegram.org/bot'+BOT_TOKEN+'/sendMessage?text='+string+'&chat_id=@python_newsbot&parse_mode=html')
+ 
+ #$url="https://api.telegram.org/botTOKEN/sendMessage?text=$msg&chat_id=$chat_id&parse_mode=html";
  
  #bot reply whatever it post in channel
  updater.message.reply_text(string)
