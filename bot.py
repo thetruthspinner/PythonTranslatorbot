@@ -51,6 +51,9 @@ def echo(updater,context):
 #1.adding tags in words ending with #     2.then removing #
  string=re.compile(r'(\w+#)', re.I).sub(r'<u><b>\1</b></u>', string)
  string=string.replace("#", "")
+ 
+ #replacing _ bottom dash with space
+ string=string.replace("_", " ")
 
 
  if "📚" in string:
