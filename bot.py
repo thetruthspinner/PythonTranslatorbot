@@ -67,7 +67,8 @@ def echo(updater,context):
 #replace word with tagword except fi
   string = string.replace(worrd, tagworrd).replace(tagworrd, worrd, 1)
  
- 
+#replacing _ bottom dash with space
+ string=string.replace("_", " ")
  #capitalize first letter after 📚 that we lowered earlier
  string= ( re.sub("(^|[📚])\s*([a-zA-Z])", lambda p: p.group(0).upper(), string))
  
