@@ -20,7 +20,7 @@ def echo(updater,context):
  translator = Translator(service_urls=['translate.googleapis.com'])  
  translation = translator.translate(usr_msg,dest='hi')
  x= translation.text
- context.bot.send_message(updater.message.chat.id, x)
+# context.bot.send_message(updater.message.chat.id, x)
  
  
  string=usr_msg.replace("\n", " %0A")
@@ -61,6 +61,10 @@ def echo(updater,context):
   index = li.index('📚')
 #get the next word after 📚
   worrd=li[index+1]
+  
+  #trying translation
+  translation = translator.translate(usr_msg,dest='hi')
+  x= translation.text
   worrd=worrd.lower()
   tagworrd="<u><b>"+worrd+"</b></u>"
 
