@@ -25,7 +25,7 @@ def echo(updater,context):
  
  
  
- string=usr_msg.replace("\n", "%0A")
+ string=usr_msg.replace("\n", " %0A")
  
 #capitalize first letter after colon
  string = ( re.sub("(^|[:])\s*([a-zA-Z])", lambda p: p.group(0).upper(), string))
