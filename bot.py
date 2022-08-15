@@ -40,6 +40,7 @@ def echo(updater,context):
 
  string=string.replace("Definition:","<u>Definition</u>: ");
  string=string.replace("Example:","<u>Example</u>: ");
+ string=string.replace("Synonym:","<u>Synonym</u>: ");
  string=string.replace("Examples:","<u>Examples</u>: ");
  string=string.replace("Today in News:","<u>Today in News</u>: ");
  string=string.replace("Today in news:","<u>Today in News</u>: ");
