@@ -22,7 +22,8 @@ def echo(updater,context):
  x= translation.text
  context.bot.send_message(updater.message.chat.id, x)
  
- 
+ #lowercasing first letter after 📚 which we will capitalize at end
+ string= ( re.sub("(^|[📚])\s*([a-zA-Z])", lambda p: p.group(0).lower(), string))
  
  
  string=usr_msg.replace("\n", " %0A")
@@ -61,13 +62,13 @@ def echo(updater,context):
  tagworrd="<u><b>"+worrd+"</b></u>"
 
 #replace word with tagword except fi
- res = string.replace(worrd, tagworrd).replace(tagworrd, worrd, 1)
+ string = string.replace(worrd, tagworrd).replace(tagworrd, worrd, 1)
  
  
  #capitalize first letter after 📚
  string= ( re.sub("(^|[📚])\s*([a-zA-Z])", lambda p: p.group(0).upper(), string))
  
- requests.post('https://api.telegram.org/bot'+BOT_TOKEN+'/sendMessage?text='+res+'&chat_id=@mypythontrybot&parse_mode=html')
+ requests.post('https://api.telegram.org/bot'+BOT_TOKEN+'/sendMessage?text='+string+'&chat_id=@mypythontrybot&parse_mode=html')
 
 #sendMessage?chat_id=@mypythontrybot&text='+res)      $url="https://api.telegram.org/bot5532663799:AAF6Kzt0Ux4rYW9ctNckvm7b_cKHp5om6kk/sendMessage?text=$msg&chat_id=@trymybott&parse_mode=html";
  
