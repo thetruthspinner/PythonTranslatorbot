@@ -63,8 +63,8 @@ def echo(updater,context):
   worrd=li[index+1]
   
   #trying translation
-  translation = translator.translate(word,dest='hi')
-  x= translation.text
+  translationn = translator.translate(word,dest='hi')
+  x= translationn.text
   worrd=worrd.lower()
   tagworrd="<u><b>"+worrd+"</b></u>"
 
