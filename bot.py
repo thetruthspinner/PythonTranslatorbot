@@ -52,17 +52,17 @@ def echo(updater,context):
  string=string.replace("#", "")
 
 
-
+ if "📚" in string:
 #convert string into list li
- li = string.split(" ")
- index = li.index('📚')
+  li = string.split(" ")
+  index = li.index('📚')
 #get the next word after 📚
- worrd=li[index+1]
- worrd=worrd.lower()
- tagworrd="<u><b>"+worrd+"</b></u>"
+  worrd=li[index+1]
+  worrd=worrd.lower()
+  tagworrd="<u><b>"+worrd+"</b></u>"
 
 #replace word with tagword except fi
- string = string.replace(worrd, tagworrd).replace(tagworrd, worrd, 1)
+  string = string.replace(worrd, tagworrd).replace(tagworrd, worrd, 1)
  
  
  #capitalize first letter after 📚 that we lowered earlier
