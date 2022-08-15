@@ -30,8 +30,7 @@ def echo(updater,context):
 #capitalize first letter after colon
  string = ( re.sub("(^|[:])\s*([a-zA-Z])", lambda p: p.group(0).upper(), string))
 
-#capitalize first letter after 📚
- string= ( re.sub("(^|[📚])\s*([a-zA-Z])", lambda p: p.group(0).upper(), string))
+
 
 #capitalize first letter after ➥
  string=( re.sub("(^|[➥])\s*([a-zA-Z])", lambda p: p.group(0).upper(), string))
@@ -64,7 +63,8 @@ def echo(updater,context):
  res = string.replace(worrd, tagworrd).replace(tagworrd, worrd, 1)
  
  
- 
+ #capitalize first letter after 📚
+ string= ( re.sub("(^|[📚])\s*([a-zA-Z])", lambda p: p.group(0).upper(), string))
  
  requests.post('https://api.telegram.org/bot'+BOT_TOKEN+'/sendMessage?text='+res+'&chat_id=@mypythontrybot&parse_mode=html')
 
