@@ -66,6 +66,8 @@ def echo(updater,context):
   translationn = translator.translate(word,dest='hi')
   x= translationn.text
   worrd=worrd.lower()
+  context.bot.send_message(updater.message.chat.id, x)
+  
   tagworrd="<u><b>"+worrd+"</b></u>"
 
 #replace word with tagword except fi
