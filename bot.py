@@ -75,6 +75,12 @@ def echo(updater,context):
 #replacing _ bottom dash with space
  string=string.replace("_", " ")
  
+ 
+ #Add dot at the end of definition sentence and remove extra dot. 
+ string= (re.sub("(\.*\s*%0A\s*%0A🗞️)", "%0A %0A🗞️", string))
+ string = (re.sub("(%0A %0A🗞️)", ".%0A %0A🗞️", string))
+ 
+ 
  #capitalize first letter after 📚 that we lowered earlier
  string= ( re.sub("(^|[📚])\s*([a-zA-Z])", lambda p: p.group(0).upper(), string))
  
