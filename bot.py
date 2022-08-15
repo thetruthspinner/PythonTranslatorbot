@@ -63,17 +63,18 @@ def echo(updater,context):
   worrd=li[index+1]
   
   #trying translation
-  translationn = translator.translate(worrd,dest='hi')
-  y= translationn.text
-  context.bot.send_message(updater.message.chat.id, y)
+#  translationn = translator.translate(worrd,dest='hi')
+#  y= translationn.text
+#  context.bot.send_message(updater.message.chat.id, y)
   worrd=worrd.lower()
   tagworrd="<u><b>"+worrd+"</b></u>"
 
-#replace word with tagword except fi
+#replace word with tagword except first one
   string = string.replace(worrd, tagworrd).replace(tagworrd, worrd, 1)
  
 #replacing _ bottom dash with space
  string=string.replace("_", " ")
+ 
  #capitalize first letter after 📚 that we lowered earlier
  string= ( re.sub("(^|[📚])\s*([a-zA-Z])", lambda p: p.group(0).upper(), string))
  
