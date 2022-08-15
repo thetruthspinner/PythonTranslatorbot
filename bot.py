@@ -66,7 +66,7 @@ def echo(updater,context):
  
  
  
- requests.post('https://api.telegram.org/bot'+BOT_TOKEN+'/sendMessage?text=$msg&chat_id=@mypythontrybot&parse_mode=html
+ requests.post('https://api.telegram.org/bot'+BOT_TOKEN+'/sendMessage?text=$msg&chat_id=@mypythontrybot&parse_mode=html'
 
 #sendMessage?chat_id=@mypythontrybot&text='+res)
  
