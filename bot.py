@@ -80,6 +80,9 @@ def echo(updater,context):
  
  requests.post('https://api.telegram.org/bot'+BOT_TOKEN+'/sendMessage?text='+string+'&chat_id=@thenewswords&parse_mode=html')
  
+ #bot reply whatever it post in channel
+ updater.message.reply_text('string)
+ 
 # updater.message.reply_text('function reached here')
  
  
