@@ -3,6 +3,7 @@ from telegram.ext import Updater,MessageHandler,CommandHandler,Filters
 from googletrans import Translator
 import os
 import requests
+import re
 
 BOT_TOKEN = '5462330526:AAHVnNoLYJBULOmDZehUZlP-j5DUybyfwLY'
 
@@ -14,10 +15,13 @@ def start(updater,context):
 def echo(updater,context):
  updater.message.reply_text('Working function')
  usr_msg = updater.message.text
+ 
  context.bot.send_message(updater.message.chat.id, usr_msg)
  translator = Translator(service_urls=['translate.googleapis.com'])  
  translation = translator.translate(usr_msg,dest='hi')
  x= translation.text
+ 
+ 
  context.bot.send_message(updater.message.chat.id, x)
  requests.post('https://api.telegram.org/bot'+BOT_TOKEN+'/sendMessage?chat_id=@mypythontrybot&text='+x)
  updater.message.reply_text('function reached here')
