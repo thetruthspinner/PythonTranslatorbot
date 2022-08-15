@@ -57,7 +57,7 @@ def echo(updater,context):
  index = li.index('📚')
 #get the next word after 📚
  worrd=li[index+1]
- worrd.lower()
+ worrd=worrd.lower()
  tagworrd="<u><b>"+worrd+"</b></u>"
 
 #replace word with tagword except fi
