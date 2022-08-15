@@ -16,7 +16,7 @@ def echo(updater,context):
 # updater.message.reply_text('Working function')
  usr_msg = updater.message.text
  
- context.bot.send_message(updater.message.chat.id, usr_msg)
+# context.bot.send_message(updater.message.chat.id, usr_msg)
 # translator = Translator(service_urls=['translate.googleapis.com'])  
 # translation = translator.translate(usr_msg,dest='hi')
 # x= translation.text
