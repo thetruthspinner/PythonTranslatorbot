@@ -86,7 +86,7 @@ def echo(updater,context):
  #capitalize first letter after 📚 that we lowered earlier
  string= ( re.sub("(^|[📚])\s*([a-zA-Z])", lambda p: p.group(0).upper(), string))
  
- requests.post('https://api.telegram.org/bot'+BOT_TOKEN+'/sendMessage?text='+string+'&chat_id=@thenewswords&parse_mode=html')
+# requests.post('https://api.telegram.org/bot'+BOT_TOKEN+'/sendMessage?text='+string+'&chat_id=@thenewswords&parse_mode=html')
  
  requests.post('https://api.telegram.org/bot'+BOT_TOKEN+'/sendMessage?text='+string+'&chat_id=1518527842&parse_mode=html')
  
