@@ -13,13 +13,13 @@ def start(updater,context):
  updater.message.reply_text('hi i am google translater')
  
 def echo(updater,context):
- updater.message.reply_text('Working function')
+# updater.message.reply_text('Working function')
  usr_msg = updater.message.text
  
  context.bot.send_message(updater.message.chat.id, usr_msg)
- translator = Translator(service_urls=['translate.googleapis.com'])  
- translation = translator.translate(usr_msg,dest='hi')
- x= translation.text
+# translator = Translator(service_urls=['translate.googleapis.com'])  
+# translation = translator.translate(usr_msg,dest='hi')
+# x= translation.text
 # context.bot.send_message(updater.message.chat.id, x)
  
  
@@ -80,7 +80,7 @@ def echo(updater,context):
  
  requests.post('https://api.telegram.org/bot'+BOT_TOKEN+'/sendMessage?text='+string+'&chat_id=@thenewswords&parse_mode=html')
  
- updater.message.reply_text('function reached here')
+# updater.message.reply_text('function reached here')
  
  
 dp =updater.dispatcher.add_handler
