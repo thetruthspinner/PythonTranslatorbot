@@ -5,7 +5,7 @@ import os
 import requests
 import re
 
-BOT_TOKEN = '5462330526:AAHVnNoLYJBULOmDZehUZlP-j5DUybyfwLY'
+BOT_TOKEN = '5625363421:AAGXCw7vlzV1fhKPqTTwrd62SDhWP_AIcMY'
 
 updater = Updater(BOT_TOKEN,use_context = True )
 
@@ -26,7 +26,7 @@ def echo(updater,context):
  string=usr_msg.replace("\n", " %0A")
  
   #lowercasing first letter after 📚 which we will capitalize at end
- string= ( re.sub("(^|[📚])\s*([a-zA-Z])", lambda p: p.group(0).lower(), string))
+ string= ( re.sub("(^|[📚])\s*([a-zA-Z])", lambda p: p.group(0).lower(), usr_msg))
  
 #capitalize first letter after colon
  string = ( re.sub("(^|[:])\s*([a-zA-Z])", lambda p: p.group(0).upper(), string))
